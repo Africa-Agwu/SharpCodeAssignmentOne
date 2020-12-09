@@ -1,0 +1,51 @@
+﻿@model SharpCodeAssignmentOne.Models.StudentInfo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            First Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoFirstName)
+        </dd>
+        <dt class="col-sm-2">
+            Last Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoLastName)
+        </dd>
+        <dt class="col-sm-2">
+            Gender
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoSex)
+        </dd>
+        <dt class="col-sm-2">
+           Age
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoAge)
+        </dd>
+        <dt class="col-sm-2">
+           Class
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoClass)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="StudentInfoID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

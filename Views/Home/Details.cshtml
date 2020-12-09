@@ -1,0 +1,48 @@
+﻿@model SharpCodeAssignmentOne.Models.StudentInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            First Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoFirstName)
+        </dd>
+        <dt class="col-sm-2">
+            Last Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoLastName)
+        </dd>
+        <dt class="col-sm-2">
+           Gender
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoSex)
+        </dd>
+        <dt class="col-sm-2">
+            Age
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoAge)
+        </dd>
+        <dt class="col-sm-2">
+            Class
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentInfoClass)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.StudentInfoID">Edit</a> |
+    <a asp-action="Students">Back to List</a>
+</div>
